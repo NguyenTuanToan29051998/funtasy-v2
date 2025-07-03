@@ -6,7 +6,6 @@ import ReputationSection from "../organisms/ReputationSection";
 
 const HomePage = () => {
 
-
   return (
     <>
       <BannerSession />

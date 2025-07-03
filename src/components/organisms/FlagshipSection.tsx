@@ -1,8 +1,8 @@
 import FuntasyChart from '../../assets/images/funtasy-chart.png';
-import Scale from '../../assets/images/scale.gif';
+import Scale from '../../assets/images/scale-icon.gif';
 import LayoutGrid from '../../assets/images/layout-grid.gif';
 import LineChart from '../../assets/images/line-chart.gif';
-import Sparkles from '../../assets/images/sparkles.gif';
+import Sparkles from '../../assets/images/sparkles-icon.gif';
 import { useState } from 'react';
 
 const FlagshipSection = () => {

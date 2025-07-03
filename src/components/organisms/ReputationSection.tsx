@@ -1,4 +1,4 @@
-import Pyramid from '../../assets/images/pyramid.gif';
+import Pyramid from '../../assets/images/pyramid-icon.gif';
 import DonutChart from '../../assets/images/donut-chart.gif';
 
 const ReputationSection = () => {
