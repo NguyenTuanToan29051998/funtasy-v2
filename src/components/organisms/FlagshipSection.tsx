@@ -78,8 +78,8 @@ const FlagshipSection = () => {
 
 					<div className="my-[71px] grid gap-9 grid-cols-[auto_1fr_auto] px-[50px] max-w-[2000px] mx-auto">
 						<div className="grid h-full grid-rows-2 items-center justify-center min-w-0">
-							<div className="flex gap-3 opacity-100 animate-ezsp2i">
-								<img src={LayoutGrid} alt="" className="w-[62px] h-[62px]" />
+							<div className="flex gap-3">
+								<img src={LayoutGrid} alt="LayoutGrid" className="w-[62px] h-[62px]" />
 								<div className="flex flex-col items-start gap-2 justify-center max-w-[184px]">
 									<div className="font-ppNeueMontrealMedium text-base leading-[108%] tracking-normal text-transparent bg-gradient-to-r from-[#0A2A25] to-[#186B4F] bg-clip-text text-center">3-click coin creation</div>
 									<div className="text-[#565656] text-sm leading-[1.2]">
@@ -87,8 +87,8 @@ const FlagshipSection = () => {
 									</div>
 								</div>
 							</div>
-							<div className="flex gap-3 opacity-100 animate-ezsp2i">
-								<img src={LineChart} alt="" className="w-[62px] h-[62px]" />
+							<div className="flex gap-3">
+								<img src={LineChart} alt="LineChart" className="w-[62px] h-[62px]" />
 								<div className="flex flex-col items-start gap-2 justify-center max-w-[184px]">
 									<div className="font-ppNeueMontrealMedium text-base leading-[108%] tracking-normal text-transparent bg-gradient-to-r from-[#0A2A25] to-[#186B4F] bg-clip-text text-center">Price goes wow!</div>
 									<div className="text-[#565656] text-sm leading-[1.2]">
@@ -101,8 +101,8 @@ const FlagshipSection = () => {
 							<img src={FuntasyChart} alt="" className="css-8atqhb" />
 						</div>
 						<div className="grid h-full grid-rows-2 items-center justify-center min-w-0">
-							<div className="flex gap-3 opacity-100 animate-ezsp2i">
-								<img src={Sparkles} alt="" className="w-[62px] h-[62px]" />
+							<div className="flex gap-3">
+								<img src={Sparkles} alt="Sparkles" className="w-[62px] h-[62px]" />
 								<div className="flex flex-col items-start gap-2 justify-center max-w-[184px]">
 									<div className="font-ppNeueMontrealMedium text-base leading-[108%] tracking-normal text-transparent bg-gradient-to-r from-[#0A2A25] to-[#186B4F] bg-clip-text text-center">Security</div>
 									<div className="text-[#565656] text-sm leading-[1.2]">
@@ -110,8 +110,8 @@ const FlagshipSection = () => {
 									</div>
 								</div>
 							</div>
-							<div className="flex gap-3 opacity-100 animate-ezsp2i">
-								<img src={Scale} alt="" className="w-[62px] h-[62px]" />
+							<div className="flex gap-3">
+								<img src={Scale} alt="Scale" className="w-[62px] h-[62px]" />
 								<div className="flex flex-col items-start gap-2 justify-center max-w-[184px]">
 									<div className="font-ppNeueMontrealMedium text-base leading-[108%] tracking-normal text-transparent bg-gradient-to-r from-[#0A2A25] to-[#186B4F] bg-clip-text text-center">Fair for all</div>
 									<div className="text-[#565656] text-sm leading-[1.2]">

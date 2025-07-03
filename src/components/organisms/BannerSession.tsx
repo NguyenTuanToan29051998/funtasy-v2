@@ -16,7 +16,7 @@ const BannerSession = () => {
 			<div className="flex flex-col items-center justify-center text-center mx-11 lg:mx-0">
 				<img
 					src={Logo}
-					alt="Image description"
+					alt="logo"
 					className="w-[87px] h-[87px]"
 				/>
 				<h2
