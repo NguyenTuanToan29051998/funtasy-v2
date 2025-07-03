@@ -11,7 +11,7 @@ export default defineConfig(({ mode }) => {
       react(),
       tailwindcss(),
       ViteImageOptimizer({
-        test: /\.(jpe?g|png|gif|tiff|webp|svg|avif)$/i,
+        test: /\.(jpe?g|png|tiff|webp|svg|avif)$/i,
         jpeg: { quality: 80 },
         png: { quality: 80 },
         webp: { quality: 80 },
