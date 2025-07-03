@@ -1,0 +1,23 @@
+services:
+  nginx:
+    container_name: web
+    build:
+      dockerfile: Dockerfile
+      context: .
+    restart: unless-stopped
+    ports:
+      - 80:80
+      - 443:443
+    networks:
+      - xnetwork
+    # volumes:
+      # - ./certbot/www:/var/www/certbot
+      # - ./certbot/conf:/etc/letsencrypt
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+
+networks:
+  xnetwork:
+    external: true
