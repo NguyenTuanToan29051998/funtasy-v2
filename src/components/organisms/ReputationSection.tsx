@@ -4,7 +4,7 @@ import DonutChart from '../../assets/images/donut-chart.gif';
 const ReputationSection = () => {
 
   return (
-    <div className="bg-[#084734] text-white h-[900px] pt-[135px]">
+    <div className="bg-[#084734] text-white h-[900px] pt-20 lg:pt-[135px]">
       <h2 className="font-ppNeueMontrealMedium text-center text-xl lg:text-[32px] text-white mb-[42px]">
         The <span className="text-[#DCEE48]"><span className='italic mr-[1px]'>Fun</span>tasy</span> reputation-driven social-fi
       </h2>
