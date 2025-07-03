@@ -1,5 +1,6 @@
 import FuntasyChart from '../../assets/images/funtasy-chart.png';
-import Scale from '../../assets/images/scale-icon.gif';
+import ScaleIcon from '../../assets/images/scale-icon.gif';
+import ScaleIcon4 from '../../assets/images/4.gif';
 import LayoutGrid from '../../assets/images/layout-grid.gif';
 import LineChart from '../../assets/images/line-chart.gif';
 import Sparkles from '../../assets/images/sparkles-icon.gif';
@@ -111,7 +112,8 @@ const FlagshipSection = () => {
 								</div>
 							</div>
 							<div className="flex gap-3">
-								<img src={Scale} alt="Scale" className="w-[62px] h-[62px]" />
+								<img src={ScaleIcon} alt="Scale" className="w-[62px] h-[62px]" />
+								<img src={ScaleIcon4} alt="Scale" className="w-[62px] h-[62px]" />
 								<div className="flex flex-col items-start gap-2 justify-center max-w-[184px]">
 									<div className="font-ppNeueMontrealMedium text-base leading-[108%] tracking-normal text-transparent bg-gradient-to-r from-[#0A2A25] to-[#186B4F] bg-clip-text text-center">Fair for all</div>
 									<div className="text-[#565656] text-sm leading-[1.2]">
