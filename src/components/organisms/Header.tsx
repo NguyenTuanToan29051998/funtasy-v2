@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import useResizeScreen from '../../hooks/resize-screen';
 import { cn } from '../../utils';
-import logo from '../../assets/images/logo.gif';
 
 import { useNavigate } from 'react-router-dom';
 import { FuntasyIcon, MenuIcon } from '../../assets/icons';
@@ -39,7 +38,7 @@ const Header = ({ className }: { className?: string }) => {
         )}
       >
         <button onClick={() => navigate('/')} className="flex items-center gap-3">
-          <FuntasyIcon fill={isMobile && isOpenMenu ? 'black' : 'white'} />
+          <FuntasyIcon />
           <p className='text-[#DDEE2B] font-normal text-[20px] tracking-[0%] text-center !mb-0'><span className='italic'>Fun</span>tasy</p>
         </button>
 
