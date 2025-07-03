@@ -2,7 +2,7 @@ import FuntasyChart from '../../assets/images/funtasy-chart.png';
 import ScaleIcon from '../../assets/images/scale-icon.gif';
 import LayoutGrid from '../../assets/images/layout-grid.gif';
 import LineChart from '../../assets/images/line-chart.gif';
-import Sparkles from '../../assets/images/1.gif';
+import Sparkles from '../../assets/images/sparkles-icon.gif';
 import { useState } from 'react';
 
 const FlagshipSection = () => {
