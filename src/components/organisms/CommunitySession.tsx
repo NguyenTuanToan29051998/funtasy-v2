@@ -13,25 +13,43 @@ const CommunitySession = () => {
 		<>
 			<div className="relative h-[900px] w-full flex flex-col items-center overflow-hidden pt-[268px] lg:pt-[303px] bg-[#061C15]">
 				<img
-          className="absolute top-[125px] lg:top-0 left-0 w-full object-cover object-center z-1 h-[584px] lg:h-full"
-          src={isMobile ? CommunityMobile : Community}
-          alt="Community"
-        />
+					className="absolute top-[125px] lg:top-0 left-0 w-full object-cover object-center z-1 h-[584px] lg:h-full"
+					src={isMobile ? CommunityMobile : Community}
+					alt="Community"
+				/>
 				<div className='relative z-10 flex flex-col items-center'>
 					<p className="text-[#FFFFFF91] text-base font-normal leading-5 tracking-normal text-center">Forget the investors</p>
 					<h2 className="text-white font-ppNeueMontrealMedium mt-[6px] mb-[26px] text-2xl lg:text-[32px] text-center leading-[100%] tracking-normal">
 						This is <span className="text-white">community-first</span>,<br className="hidden md:block" /> always.
 					</h2>
 					<div className="flex justify-center items-center gap-4 flex-wrap">
-						<button className="font-ppNeueMontrealMedium bg-[#CEF17B] text-black text-sm lg:text-base px-3 py-[10px] lg:px-4 lg:py-2 rounded-full hover:opacity-85 transition">
-							Start trading
-						</button>
-						<button className="font-ppNeueMontrealMedium bg-[#CEF17B] text-black text-sm lg:text-base px-3 py-[10px] lg:px-4 lg:py-2 rounded-full hover:opacity-85 transition">
-							Create tokens
-						</button>
-						<button className="font-ppNeueMontrealMedium bg-[#CEF17B] text-black text-sm lg:text-base px-3 py-[10px] lg:px-4 lg:py-2 rounded-full hover:opacity-85 transition">
-							Earn points
-						</button>
+						<div className='relative group inline-block w-full lg:w-auto'>
+							<button className="font-ppNeueMontrealMedium bg-[#CEF17B] text-black text-sm lg:text-base px-3 py-[10px] lg:px-4 lg:py-2 rounded-full hover:opacity-85 transition">
+								Start trading
+							</button>
+							<div className='absolute bottom-full mb-2 hidden group-hover:block bg-black text-white text-base rounded px-3 py-1 whitespace-nowrap z-10 font-ppNeueMontreal left-1/2 transform -translate-x-1/2'>
+								Coming soon
+								<div className='absolute -bottom-[4px] left-1/2 transform -translate-x-1/2 w-2 h-2 bg-black rotate-45'></div>
+							</div>
+						</div>
+						<div className='relative group inline-block w-full lg:w-auto'>
+							<button className="font-ppNeueMontrealMedium bg-[#CEF17B] text-black text-sm lg:text-base px-3 py-[10px] lg:px-4 lg:py-2 rounded-full hover:opacity-85 transition">
+								Create tokens
+							</button>
+							<div className='absolute bottom-full mb-2 hidden group-hover:block bg-black text-white text-base rounded px-3 py-1 whitespace-nowrap z-10 font-ppNeueMontreal left-1/2 transform -translate-x-1/2'>
+								Coming soon
+								<div className='absolute -bottom-[4px] left-1/2 transform -translate-x-1/2 w-2 h-2 bg-black rotate-45'></div>
+							</div>
+						</div>
+						<div className='relative group inline-block w-full lg:w-auto'>
+							<button className="font-ppNeueMontrealMedium bg-[#CEF17B] text-black text-sm lg:text-base px-3 py-[10px] lg:px-4 lg:py-2 rounded-full hover:opacity-85 transition">
+								Earn points
+							</button>
+							<div className='absolute bottom-full mb-2 hidden group-hover:block bg-black text-white text-base rounded px-3 py-1 whitespace-nowrap z-10 font-ppNeueMontreal left-1/2 transform -translate-x-1/2'>
+								Coming soon
+								<div className='absolute -bottom-[4px] left-1/2 transform -translate-x-1/2 w-2 h-2 bg-black rotate-45'></div>
+							</div>
+						</div>
 					</div>
 					<div className="pt-[38px] lg:pt-12 flex flex-col items-center gap-3 lg:gap-6 mt-[138px] lg:mt-[95px] bg-[#E0FFC4] text-black w-[289px] lg:w-[869px] h-[227px] rounded-3xl">
 						<p className="font-ppNeueMontrealMedium leading-[1.5] text-base lg:text-2xl font-medium lg:leading-snug max-w-[221px] lg:max-w-[614px] text-center">

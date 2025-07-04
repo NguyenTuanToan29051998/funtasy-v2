@@ -117,94 +117,12 @@ button {
   /* Chrome, Safari and Opera */
 }
 
-.ant-pagination .ant-pagination-item-ellipsis {
-  color: white !important;
-}
-
-.ant-pagination .ant-pagination-item-active {
-  border: none !important;
-  background: #FFCD1F26 !important;
-  border-radius: 4px !important;
-    height: 36px !important;
-  width: 36px !important;
-}
-
-.ant-pagination .ant-pagination-item-active a {
-  color: #FFCD1F !important;
-  height: 36px !important;
-  width: 36px !important;
-  align-content: center !important;
-}
-
-.ant-pagination .ant-pagination-item {
-  color: white !important;
-  background: #1e1e1e !important;
-  border-radius: 4px !important;
-    height: 36px !important;
-    align-content: center !important;
-  width: 36px !important;
-}
-
-.ant-pagination .ant-pagination-item a:not(.ant-pagination-item-active a) {
-  color: white !important;
-}
-
 .no-scrollbar {
   scrollbar-width: none;
   /* Firefox */
   -ms-overflow-style: none;
   /* IE 10+ */
 }
-
-.ant-pagination-jump-next:hover .ant-pagination-item-ellipsis,
-.ant-pagination-jump-prev:hover .ant-pagination-item-ellipsis {
-  display: inline !important;
-}
-.ant-pagination-jump-next:hover .ant-pagination-item-link-icon,
-.ant-pagination-jump-prev:hover .ant-pagination-item-link-icon {
-  display: none !important;
-}
-
-.ant-pagination-jump-next,
-.ant-pagination-jump-prev {
-  pointer-events: none !important;
-}
-
-.ant-pagination-jump-prev, .ant-pagination-jump-next {
-  background-color: #1e1e1e !important;
-  height: 36px !important;
-  border-radius: 4px !important;
-}
-
-.ant-pagination-item-ellipsis {
-  font-size: 8px !important;
-  letter-spacing: 0 !important;
-  width: 16px !important;
-  min-width: 0 !important;
-  text-align: center;
-  padding: 0 !important;
-  padding-top: 4px !important;
-}
-
-.ant-pagination-prev, .ant-pagination-next {
-  background-color: #1e1e1e !important;
-  height: 36px !important;
-}
-
-.ant-pagination-next {
-  background-color: #1e1e1e !important;
-}
-
-.ant-pagination-prev .anticon,
-.ant-pagination-next .anticon {
-  color: #FFFFFF !important;
-}
-
-.ant-pagination-prev.ant-pagination-disabled .anticon,
-.ant-pagination-next.ant-pagination-disabled .anticon {
-  color: #FFFFFF30 !important;
-}
-
 
 @keyframes animation-ezsp2i {
   0% {
@@ -216,6 +134,29 @@ button {
     opacity: 1;
   }
 }
+
 .animate-ezsp2i {
   animation: animation-ezsp2i 0.4s linear 0s 1 normal none running;
+}
+
+@keyframes spin-alternate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-spin-alternate {
+  animation: spin-alternate 252s linear infinite;
 }

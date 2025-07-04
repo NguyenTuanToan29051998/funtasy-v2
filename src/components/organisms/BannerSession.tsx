@@ -4,7 +4,7 @@ import Logo from '../../assets/images/logo.gif';
 const BannerSession = () => {
 
 	return (
-		<div className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+		<div className="relative h-screen w-full flex items-center justify-center overflow-hidden z-10">
 			<video
 				className="absolute top-0 left-0 w-full h-full object-cover z-[-1] object-left lg:object-cover"
 				src={bannerVideo}
@@ -31,12 +31,24 @@ const BannerSession = () => {
 					A new standard for token trading — where AI-powered scoring of social reputation, community trust, and on-chain performance come together to launch what truly matters (and <span className="italic">fun</span>).
 				</p>
 				<div className="mt-[52px] lg:mt-6 flex gap-6">
-					<button className="font-ppNeueMontrealMedium w-[121px] h-[37px] rounded-[24px] bg-[#CEF17B] !text-[#101010] font-medium flex items-center justify-center hover:opacity-85 transition">
-						Start trading
-					</button>
-					<button className="font-ppNeueMontrealMedium w-[155px] h-[39px] py-[10px] gap-[10px] rounded-full border border-[#CEF17B] flex items-center justify-center !text-[#CEF17B] text-base font-medium hover:opacity-85">
-						Create Tokens
-					</button>
+					<div className='relative group inline-block w-full lg:w-auto'>
+						<button className="font-ppNeueMontrealMedium w-[155px] h-[37px] rounded-[24px] bg-[#CEF17B] !text-[#101010] font-medium flex items-center justify-center hover:opacity-85 transition">
+							Start trading
+						</button>
+						<div className='absolute bottom-full mb-2 hidden group-hover:block bg-black text-white text-base rounded px-3 py-1 whitespace-nowrap z-10 font-ppNeueMontreal left-1/2 transform -translate-x-1/2'>
+							Coming soon
+							<div className='absolute -bottom-[4px] left-1/2 transform -translate-x-1/2 w-2 h-2 bg-black rotate-45'></div>
+						</div>
+					</div>
+					<div className='relative group inline-block w-full lg:w-auto'>
+						<button className="font-ppNeueMontrealMedium w-[155px] h-[39px] py-[10px] gap-[10px] rounded-full border border-[#CEF17B] flex items-center justify-center !text-[#CEF17B] text-base font-medium hover:opacity-85">
+							Create Tokens
+						</button>
+						<div className='absolute bottom-full mb-2 hidden group-hover:block bg-black text-white text-base rounded px-3 py-1 whitespace-nowrap z-10 font-ppNeueMontreal left-1/2 transform -translate-x-1/2'>
+							Coming soon
+							<div className='absolute -bottom-[4px] left-1/2 transform -translate-x-1/2 w-2 h-2 bg-black rotate-45'></div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

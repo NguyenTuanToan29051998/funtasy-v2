@@ -1,11 +1,11 @@
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
+import useOutsideClick from '../../hooks/outside-click';
 import useResizeScreen from '../../hooks/resize-screen';
 import { cn } from '../../utils';
-import useOutsideClick from '../../hooks/outside-click';
 
 import { useNavigate } from 'react-router-dom';
-import { ChevronDownIcon, FuntasyIcon, MenuIcon, TelegramIcon, TwitterIcon } from '../../assets/icons';
+import { ChevronDownIcon, FuntasyIcon, MenuIcon, TwitterIcon } from '../../assets/icons';
 
 const Header = ({ className }: { className?: string }) => {
   const { widthScreen } = useResizeScreen();
@@ -42,16 +42,22 @@ const Header = ({ className }: { className?: string }) => {
           </button>
           <div className='hidden lg:flex items-center gap-6 text-white pointer-events-auto h-full justify-center'>
             <div className="flex items-center gap-6 h-full relative">
-              <div
+              <a
+                href="https://help.funtasy.game/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`font-ppNeueMontrealMedium text-base h-full content-center px-4 text-[#000000DB] border-none hover:cursor-pointer hover:underline`}
               >
                 Docs
-              </div>
-              <div
+              </a>
+              <a
+                href="https://cattos.io/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`font-ppNeueMontrealMedium text-base h-full content-center px-4 text-[#000000DB] border-none hover:cursor-pointer hover:underline`}
               >
                 Earn Points
-              </div>
+              </a>
               <div>
                 <button
                   onClick={() => setOpen(!open)}
@@ -66,21 +72,21 @@ const Header = ({ className }: { className?: string }) => {
                     className="absolute mt-2 w-52 bg-[#FFFFFF21] text-white rounded-xl z-10"
                   >
                     <a
-                      href="https://twitter.com"
+                      href="https://x.com/thefuntasy"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-between px-3 py-[13px] hover:bg-white/20 rounded-tl-xl rounded-tr-xl transition"
                     >
                       X/Twitter <TwitterIcon />
                     </a>
-                    <a
+                    {/* <a
                       href="https://t.me"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-between px-3 py-[13px] hover:bg-white/20 rounded-bl-xl rounded-br-xl transition"
                     >
                       Telegram Channel <TelegramIcon />
-                    </a>
+                    </a> */}
                   </div>
                 )}
               </div>

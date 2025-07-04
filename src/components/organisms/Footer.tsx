@@ -1,4 +1,4 @@
-import { TelegramBlackIcon, TwitterBlackIcon } from '../../assets/icons';
+import { TwitterBlackIcon } from '../../assets/icons';
 import LogoBlack from '../../assets/images/logo-black.gif';
 
 const Footer = () => {
@@ -7,21 +7,21 @@ const Footer = () => {
 			<div className='relative max-w-[1341px] w-full h-[259px] mx-auto'>
 				<div className='mt-[55px] md:mt-0 md:absolute top-[82px] right-5 flex gap-6 items-center justify-center'>
 					<a
-						href="https://twitter.com"
+						href="https://x.com/thefuntasy"
 						target="_blank"
 						rel="noopener noreferrer"
 						className='hover:opacity-80 transition'
 					>
 						<TwitterBlackIcon />
 					</a>
-					<a
+					{/* <a
 						href="https://t.me"
 						target="_blank"
 						rel="noopener noreferrer"
 						className='hover:opacity-80 transition'
 					>
 						<TelegramBlackIcon />
-					</a>
+					</a> */}
 				</div>
 				<div className='flex md:hidden items-center justify-center'>
 					<img src={LogoBlack} alt="Logo" className="w-[87px] h-[87px]" />
