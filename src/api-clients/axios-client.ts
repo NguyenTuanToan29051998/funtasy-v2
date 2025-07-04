@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = '/api/';
+const baseUrl = 'https://fpoint.cattos.io/v1/';
 
 const axiosInstance = axios.create({
   baseURL: baseUrl,

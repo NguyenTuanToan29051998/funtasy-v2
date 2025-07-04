@@ -14,7 +14,11 @@ const Header = ({ className }: { className?: string }) => {
   const isMobile = widthScreen <= 1024;
   const [open, setOpen] = useState(false);
 
-  const dropdownRef = useOutsideClick(() => setOpen(false));
+  const dropdownRef = useOutsideClick(() => {
+    setTimeout(() => {
+      setOpen(false);
+    }, 0);
+  });
 
   const toggleMenu = () => setIsOpenMenu(prev => !prev);
   const closeMenu = () => setIsOpenMenu(false);

@@ -8,11 +8,14 @@ import axios from 'axios';
 import apiRequest from '../../api-clients/user';
 import CountUp from 'react-countup';
 import { getShortNumber, getUnitSuffix } from '../../helpers';
+import { PointsApiManagement } from '../../api-clients/fpoit';
 
 const FlagshipSection = () => {
 	const [hoverText, setHoverText] = useState(false);
-	const [totalUser, setTotalUser] = useState(null);
-	const [totalTransactions, setTotalTransactions] = useState(null);
+	const [totalUsers, setTotalUsers] = useState<number>();
+	const [totalFPoints, setTotalFPoints] = useState<number>();
+	const [totalWallets, setTotalWallets] = useState<number>();
+	const [totalTransactions, setTotalTransactions] = useState<number>();
 
 	const chars1 = "flagship".split("");
 	const chars2 = "platform".split("");
@@ -38,27 +41,36 @@ const FlagshipSection = () => {
 		["inline-block transition-transform duration-500 ease-out translate-y-0", "absolute top-0 transition-transform duration-500 ease-out translate-y-0"]
 	];
 
-	useEffect(() => {
-		async function fetchAllData() {
-			try {
-				const [txnRes] = await Promise.all([
-					axios.get("https://api.dune.com/api/v1/query/5168753/results?api_key=chFRkSeoNDnXMQq0E2kZSpLnxZQ1aytn"),
-				]);
-				setTotalTransactions(txnRes.data.result?.rows[0]._col0);
-			} catch (err) {
-				console.error('Error fetching txn or wallet count:', err);
-			}
+  useEffect(() => {
+    async function fetchAllData() {
+      try {
+        const [txnRes, walletRes] = await Promise.all([
+          axios.get("https://api.dune.com/api/v1/query/5168753/results?api_key=chFRkSeoNDnXMQq0E2kZSpLnxZQ1aytn"),
+          axios.get("https://api.dune.com/api/v1/query/5169067/results?api_key=chFRkSeoNDnXMQq0E2kZSpLnxZQ1aytn")
+        ]);
+        setTotalTransactions(txnRes.data.result?.rows[0]._col0);
+        setTotalWallets(walletRes.data.result.rows[0].total_wallets);
+      } catch (err) {
+        console.error('Error fetching txn or wallet count:', err);
+      }
 
-			try {
-				const resLogin = await apiRequest('/user/totaluser.public', {});
-				setTotalUser(resLogin.count);
-			} catch (error) {
-				console.error('Error fetching total users:', error);
-			}
-		}
+      try {
+        const pointsRes = await PointsApiManagement.getTotolPoint();
+        setTotalFPoints(pointsRes.data.data.point / 1e3);
+      } catch (err) {
+        console.error('Error fetching points:', err);
+      }
 
-		fetchAllData();
-	}, []);
+      try {
+        const resLogin = await apiRequest('/user/totaluser.public', {});
+        setTotalUsers(resLogin.count);
+      } catch (error) {
+        console.error('Error fetching total users:', error);
+      }
+    }
+
+    fetchAllData();
+  }, []);
 
 	return (
 		<>
@@ -157,27 +169,52 @@ const FlagshipSection = () => {
 					</div>
 					<div className="mb-[75px] lg:mb-0 w-full max-w-[306px] md:max-w-[1002px] rounded-xl py-[22px] border border-[#5EC09F] lg:mx-auto grid grid-cols-2 gap-y-4 md:flex md:h-[99px]">
 						<div className="flex gap-[6px] w-full flex-col items-center py-2">
-							<span className="text-[15px] font-normal leading-[100%] text-center text-[#186B4F]">Users</span>
+							<span className="text-[15px] font-normal leading-[100%] text-center text-[#186B4F]">Total Users</span>
 							<div className='flex items-center text-[26px] font-medium leading-[100%] text-center text-[#1E1E1E] font-ppNeueMontrealMedium'>
 								<CountUp
 									start={0}
-									end={parseFloat(getShortNumber(totalUser || 0))}
+									end={parseFloat(getShortNumber(totalUsers || 0))}
 									delay={0.5}
 									decimals={2}
 									decimal='.'
 									className=''
 								/>
-								<p className=''>{getUnitSuffix(totalUser || 0)}</p>
+								<p className=''>{getUnitSuffix(totalUsers || 0)}</p>
 							</div>
 						</div>
 						<div className="hidden md:block w-[1px] h-12 bg-[#5EC09F] opacity-50"></div>
 						<div className="flex gap-[6px] w-full flex-col items-center py-2">
-							<span className="text-[15px] font-normal leading-[100%] text-center text-[#186B4F]">Tokens</span>
-							<span className="text-[26px] font-medium leading-[100%] text-center text-[#1E1E1E] font-ppNeueMontrealMedium">100</span>
+							<span className="text-[15px] font-normal leading-[100%] text-center text-[#186B4F]">Total F Points</span>
+							<div className='flex items-center text-[26px] font-medium leading-[100%] text-center text-[#1E1E1E] font-ppNeueMontrealMedium'>
+								<CountUp
+									start={0}
+									end={parseFloat(getShortNumber(totalFPoints || 0))}
+									delay={0.5}
+									decimals={2}
+									decimal='.'
+									className=''
+								/>
+								<p className=''>{getUnitSuffix(totalFPoints || 0)}</p>
+							</div>
 						</div>
 						<div className="hidden md:block w-[1px] h-12 bg-[#5EC09F] opacity-50"></div>
 						<div className="flex gap-[6px] w-full flex-col items-center py-2">
-							<span className="text-[15px] font-normal leading-[100%] text-center text-[#186B4F]">Transactions</span>
+							<span className="text-[15px] font-normal leading-[100%] text-center text-[#186B4F]">Total Unique Wallets</span>
+							<div className='flex items-center text-[26px] font-medium leading-[100%] text-center text-[#1E1E1E] font-ppNeueMontrealMedium'>
+								<CountUp
+									start={0}
+									end={parseFloat(getShortNumber(totalWallets || 0))}
+									delay={0.5}
+									decimals={2}
+									decimal='.'
+									className=''
+								/>
+								<p className=''>{getUnitSuffix(totalWallets || 0)}</p>
+							</div>
+						</div>
+						<div className="hidden md:block w-[1px] h-12 bg-[#5EC09F] opacity-50"></div>
+						<div className="flex gap-[6px] w-full flex-col items-center py-2">
+							<span className="text-[15px] font-normal leading-[100%] text-center text-[#186B4F]">Total Transactions</span>
 							<div className='flex items-center text-[26px] font-medium leading-[100%] text-center text-[#1E1E1E] font-ppNeueMontrealMedium'>
 								<CountUp
 									start={0}
@@ -189,11 +226,6 @@ const FlagshipSection = () => {
 								/>
 								<p className=''>{getUnitSuffix(totalTransactions || 0)}</p>
 							</div>
-						</div>
-						<div className="hidden md:block w-[1px] h-12 bg-[#5EC09F] opacity-50"></div>
-						<div className="flex gap-[6px] w-full flex-col items-center py-2">
-							<span className="text-[15px] font-normal leading-[100%] text-center text-[#186B4F]">Accumulated Volume</span>
-							<span className="text-[26px] font-medium leading-[100%] text-center text-[#1E1E1E] font-ppNeueMontrealMedium">$10M</span>
 						</div>
 					</div>
 				</div>
