@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import useResizeScreen from '../../hooks/resize-screen';
 import { cn } from '../../utils';
+import useOutsideClick from '../../hooks/outside-click';
 
 import { useNavigate } from 'react-router-dom';
 import { ChevronDownIcon, FuntasyIcon, MenuIcon, TelegramIcon, TwitterIcon } from '../../assets/icons';
@@ -13,6 +14,7 @@ const Header = ({ className }: { className?: string }) => {
   const isMobile = widthScreen <= 1024;
   const [open, setOpen] = useState(false);
 
+  const dropdownRef = useOutsideClick(() => setOpen(false));
 
   const toggleMenu = () => setIsOpenMenu(prev => !prev);
   const closeMenu = () => setIsOpenMenu(false);
@@ -49,13 +51,16 @@ const Header = ({ className }: { className?: string }) => {
               <div>
                 <button
                   onClick={() => setOpen(!open)}
-                  className="font-ppNeueMontrealMedium bg-[#0000001A] text-[#000000DB] px-[14.5px] py-[6px] rounded-md flex items-center gap-2 text-base hover:cursor-pointer"
+                  className="font-ppNeueMontrealMedium bg-[#0000001A] text-[#000000DB] w-[100px] h-[31px] rounded-xl flex items-center justify-center gap-[10px] text-base hover:cursor-pointer hover:opacity-85 transition"
                 >
                   Social
                   <ChevronDownIcon />
                 </button>
                 {open && (
-                  <div className="absolute mt-2 w-52 bg-[#FFFFFF21] text-white rounded-xl z-10">
+                  <div
+                    ref={dropdownRef}
+                    className="absolute mt-2 w-52 bg-[#FFFFFF21] text-white rounded-xl z-10"
+                  >
                     <a
                       href="https://twitter.com"
                       target="_blank"
