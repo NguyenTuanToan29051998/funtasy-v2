@@ -69,7 +69,7 @@ const Header = ({ className }: { className?: string }) => {
                 {open && (
                   <div
                     ref={dropdownRef}
-                    className="absolute mt-2 w-52 bg-[#FFFFFF21] text-white rounded-xl z-10"
+                    className="absolute mt-2 w-52 bg-[#FFFFFF21] text-white rounded-xl z-20"
                   >
                     <a
                       href="https://x.com/thefuntasy"
