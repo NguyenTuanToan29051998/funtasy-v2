@@ -4,11 +4,11 @@ import DonutChart from '../../assets/images/donut-chart.gif';
 const ReputationSection = () => {
 
   return (
-    <div className="bg-[#084734] text-white h-[900px] pt-20 lg:pt-[135px]">
-      <h2 className="font-ppNeueMontrealMedium text-center text-xl lg:text-[32px] text-white mb-[42px]">
+    <div className="bg-[#084734] text-white h-[1243px] lg:h-[900px] pt-20 lg:pt-[135px]">
+      <h2 className="font-ppNeueMontrealMedium text-center text-2xl lg:text-[32px] text-white mb-[58px] lg:mb-[42px] max-w-[240px] lg:max-w-max mx-auto">
         The <span className="text-[#DCEE48]"><span className='italic mr-[1px]'>Fun</span>tasy</span> reputation-driven social-fi
       </h2>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 mx-auto max-w-[1096px] max-h-[517px]">
+      <div className="px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 mx-auto max-w-[1096px] max-h-[517px]">
         <div className="border border-[#E8FFA766] rounded-3xl flex flex-col items-center">
           <div className="text-sm lg:text-xl text-white p-6">
             We merge <span className="text-[#DFEC2A]">on-chain activity</span> and <span className="text-[#DFEC2A]">social data</span> with AI to generate

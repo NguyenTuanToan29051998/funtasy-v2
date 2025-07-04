@@ -103,7 +103,7 @@ const FlagshipSection = () => {
 								</div>
 							</div>
 						</div>
-						<div className="hidden lg:block lg:w-[330px] lg:h-[196px] xl:w-[631px] h-[376px] rounded-[12px]">
+						<div className="hidden lg:block lg:w-[330px] lg:h-[196px] xl:w-[631px] xl:h-[376px] rounded-[12px]">
 							<img src={FuntasyChart} alt="" className="css-8atqhb" />
 						</div>
 						<div className="grid gap-6 h-full grid-rows-2 items-center justify-center min-w-0">
