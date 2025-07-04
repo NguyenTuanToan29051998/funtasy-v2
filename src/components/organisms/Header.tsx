@@ -76,6 +76,7 @@ const Header = ({ className }: { className?: string }) => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-between px-3 py-[13px] hover:bg-white/20 rounded-tl-xl rounded-tr-xl transition"
+                      onClick={() => setOpen(false)}
                     >
                       X/Twitter <TwitterIcon />
                     </a>
