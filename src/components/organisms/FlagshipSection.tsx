@@ -3,10 +3,16 @@ import ScaleIcon from '../../assets/images/scale-icon.gif';
 import LayoutGrid from '../../assets/images/layout-grid.gif';
 import LineChart from '../../assets/images/line-chart.gif';
 import Sparkles from '../../assets/images/sparkles-icon.gif';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import apiRequest from '../../api-clients/user';
+import CountUp from 'react-countup';
+import { getShortNumber, getUnitSuffix } from '../../helpers';
 
 const FlagshipSection = () => {
 	const [hoverText, setHoverText] = useState(false);
+	const [totalUser, setTotalUser] = useState(null);
+	const [totalTransactions, setTotalTransactions] = useState(null);
 
 	const chars1 = "flagship".split("");
 	const chars2 = "platform".split("");
@@ -31,6 +37,28 @@ const FlagshipSection = () => {
 		["inline-block transition-transform duration-500 ease-out translate-y-[30px]", "absolute top-0 transition-transform duration-500 ease-out -translate-y-[30px]"],
 		["inline-block transition-transform duration-500 ease-out translate-y-0", "absolute top-0 transition-transform duration-500 ease-out translate-y-0"]
 	];
+
+	useEffect(() => {
+		async function fetchAllData() {
+			try {
+				const [txnRes] = await Promise.all([
+					axios.get("https://api.dune.com/api/v1/query/5168753/results?api_key=chFRkSeoNDnXMQq0E2kZSpLnxZQ1aytn"),
+				]);
+				setTotalTransactions(txnRes.data.result?.rows[0]._col0);
+			} catch (err) {
+				console.error('Error fetching txn or wallet count:', err);
+			}
+
+			try {
+				const resLogin = await apiRequest('/user/totaluser.public', {});
+				setTotalUser(resLogin.count);
+			} catch (error) {
+				console.error('Error fetching total users:', error);
+			}
+		}
+
+		fetchAllData();
+	}, []);
 
 	return (
 		<>
@@ -130,7 +158,17 @@ const FlagshipSection = () => {
 					<div className="mb-[75px] lg:mb-0 w-full max-w-[306px] md:max-w-[1002px] rounded-xl py-[22px] border border-[#5EC09F] lg:mx-auto grid grid-cols-2 gap-y-4 md:flex md:h-[99px]">
 						<div className="flex gap-[6px] w-full flex-col items-center py-2">
 							<span className="text-[15px] font-normal leading-[100%] text-center text-[#186B4F]">Users</span>
-							<span className="text-[26px] font-medium leading-[100%] text-center text-[#1E1E1E] font-ppNeueMontrealMedium">200,000</span>
+							<div className='flex items-center text-[26px] font-medium leading-[100%] text-center text-[#1E1E1E] font-ppNeueMontrealMedium'>
+								<CountUp
+									start={0}
+									end={parseFloat(getShortNumber(totalUser || 0))}
+									delay={0.5}
+									decimals={2}
+									decimal='.'
+									className=''
+								/>
+								<p className=''>{getUnitSuffix(totalUser || 0)}</p>
+							</div>
 						</div>
 						<div className="hidden md:block w-[1px] h-12 bg-[#5EC09F] opacity-50"></div>
 						<div className="flex gap-[6px] w-full flex-col items-center py-2">
@@ -140,7 +178,17 @@ const FlagshipSection = () => {
 						<div className="hidden md:block w-[1px] h-12 bg-[#5EC09F] opacity-50"></div>
 						<div className="flex gap-[6px] w-full flex-col items-center py-2">
 							<span className="text-[15px] font-normal leading-[100%] text-center text-[#186B4F]">Transactions</span>
-							<span className="text-[26px] font-medium leading-[100%] text-center text-[#1E1E1E] font-ppNeueMontrealMedium">7,382,384</span>
+							<div className='flex items-center text-[26px] font-medium leading-[100%] text-center text-[#1E1E1E] font-ppNeueMontrealMedium'>
+								<CountUp
+									start={0}
+									end={parseFloat(getShortNumber(totalTransactions || 0))}
+									delay={0.5}
+									decimals={2}
+									decimal='.'
+									className=''
+								/>
+								<p className=''>{getUnitSuffix(totalTransactions || 0)}</p>
+							</div>
 						</div>
 						<div className="hidden md:block w-[1px] h-12 bg-[#5EC09F] opacity-50"></div>
 						<div className="flex gap-[6px] w-full flex-col items-center py-2">

@@ -29,7 +29,7 @@ export default defineConfig(({ mode }) => {
         },
       },
       host: true,
-      port: 5173,
+      port: 3001,
       // allowedHosts: ['XXX.com'], // real domain
     },
   };

@@ -34,7 +34,7 @@ const Header = ({ className }: { className?: string }) => {
         )}>
           <button onClick={() => navigate('/')} className="flex items-center gap-3">
             <FuntasyIcon />
-            <p className='text-black font-normal text-[20px] tracking-[0%] text-center !mb-0'><span className='italic'>Fun</span>tasy</p>
+            <p className='text-black font-normal text-[20px] tracking-[0%] text-center !mb-0'><span className='italic mr-[2px]'>Fun</span>tasy</p>
           </button>
           <div className='hidden lg:flex items-center gap-6 text-white pointer-events-auto h-full justify-center'>
             <div className="flex items-center gap-6 h-full relative">
