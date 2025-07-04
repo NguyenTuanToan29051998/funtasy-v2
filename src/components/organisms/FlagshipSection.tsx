@@ -75,16 +75,16 @@ const FlagshipSection = () => {
 	}, []);
 
 	return (
-		<div className="bg-[#E0FFC4] h-auto lg:h-[900px] w-full relative pt-[75px] lg:pt-[137px]">
+		<div className="bg-[#E0FFC4] h-auto lg:h-[900px] w-full relative pt-[75px] lg:pt-[137px] overflow-hidden">
 			<img
 				src={Ring1}
 				alt="ring"
-				className="hidden lg:block absolute left-1/2 top-1/2 w-[1077px] h-[1077px] -translate-x-1/2 -translate-y-1/2 animate-spin-alternate pointer-events-none select-none"
+				className="absolute left-1/2 top-1/2 min-w-[1077px] h-[1077px] min-h-[1077px] object-cover object-left -translate-x-1/2 -translate-y-1/2 animate-spin-alternate pointer-events-none select-none"
 			/>
-				<img
+			<img
 				src={Ring2}
 				alt="ring"
-				className="hidden lg:block absolute left-1/2 top-1/2 w-[787px] h-[787px] -translate-x-1/2 -translate-y-1/2 animate-spin-alternate pointer-events-none select-none"
+				className="absolute left-1/2 top-1/2 min-w-[787px] h-[787px] min-h-[787px] object-cover object-left -translate-x-1/2 -translate-y-1/2 animate-spin-alternate pointer-events-none select-none"
 			/>
 			<div className='relative z-10 flex flex-col items-center'>
 				<div
