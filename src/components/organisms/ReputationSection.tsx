@@ -11,8 +11,8 @@ const ReputationSection = () => {
       <div className="px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 mx-auto max-w-[1096px] max-h-[517px]">
         <div className="border border-[#E8FFA766] rounded-3xl flex flex-col items-center h-[380px] lg:h-[517px]">
           <div className="text-base lg:text-xl text-white p-6">
-            We merge <span className="text-[#DFEC2A]">on-chain activity</span> and <span className="text-[#DFEC2A]">social data</span> with AI to generate
-            <span className="inline-flex items-center gap-1 bg-[#E9FFAD] text-black text-base rounded-xl w-[155px] h-[21px] ml-2 align-middle justify-center">
+            We merge <span className="text-[#DFEC2A]">on-chain activity</span> and <span className="text-[#DFEC2A]">social data</span> <span className='mr-2'>with AI to generate</span>
+            <span className="inline-flex items-center gap-1 bg-[#E9FFAD] text-black text-base rounded-xl w-[155px] h-[21px] align-middle justify-center">
               <span className="-mt-[2px]">user trust scores</span>
               <span>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">

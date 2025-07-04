@@ -2,6 +2,7 @@
 import BannerSession from "../organisms/BannerSession";
 import CommunitySession from "../organisms/CommunitySession";
 import FlagshipSection from "../organisms/FlagshipSection";
+import Footer from "../organisms/Footer";
 import ReputationSection from "../organisms/ReputationSection";
 
 const HomePage = () => {
@@ -12,6 +13,7 @@ const HomePage = () => {
       <FlagshipSection />
       <ReputationSection />
       <CommunitySession />
+      <Footer />
     </>
   );
 };

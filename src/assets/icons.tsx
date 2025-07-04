@@ -51,7 +51,6 @@ const TwitterIcon = () => {
         <path d="M17.75 3.33339H20.8171L14.1171 10.6749L22 20.6667H15.8286L10.9914 14.608L5.46286 20.6667H2.39286L9.55857 12.8115L2 3.33476H8.32857L12.6943 8.87164L17.75 3.33339ZM16.6714 18.9072H18.3714L7.4 5.00142H5.57714L16.6714 18.9072Z" fill="white" />
       </g>
     </svg>
-
   );
 };
 
@@ -63,6 +62,36 @@ const TelegramIcon = () => {
   );
 };
 
+const TwitterBlackIcon = () => {
+  return (
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clip-path="url(#clip0_2_705)">
+        <mask id="mask0_2_705" style={{ maskType: 'luminance' }} maskUnits="userSpaceOnUse" x="0" y="0" width="36" height="36">
+          <path d="M0 0H36V36H0V0Z" fill="white" />
+        </mask>
+        <g mask="url(#mask0_2_705)">
+          <path d="M26.625 5H31.2257L21.1757 16.0123L33 31H23.7429L16.4871 21.9119L8.19429 31H3.58929L14.3379 19.2172L3 5.00205H12.4929L19.0414 13.3074L26.625 5ZM25.0071 28.3607H27.5571L11.1 7.50205H8.36571L25.0071 28.3607Z" fill="#031A16" />
+        </g>
+      </g>
+      <defs>
+        <clipPath id="clip0_2_705">
+          <rect width="36" height="36" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+
+  );
+};
+
+const TelegramBlackIcon = () => {
+  return (
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M29.6655 6.64495C30.0361 6.48893 30.4419 6.43513 30.8404 6.48912C31.2389 6.54312 31.6157 6.70295 31.9315 6.95198C32.2473 7.201 32.4906 7.53012 32.636 7.90507C32.7815 8.28003 32.8237 8.68711 32.7585 9.08395L29.3565 29.7194C29.0265 31.7099 26.8425 32.8514 25.017 31.8599C23.49 31.0304 21.222 29.7524 19.182 28.4189C18.162 27.7514 15.0375 25.6139 15.4215 24.0929C15.7515 22.7924 21.0015 17.9054 24.0015 14.9999C25.179 13.8584 24.642 13.1999 23.2515 14.2499C19.7985 16.8569 14.2545 20.8214 12.4215 21.9374C10.8045 22.9214 9.96147 23.0894 8.95347 22.9214C7.11447 22.6154 5.40897 22.1414 4.01697 21.5639C2.13597 20.7839 2.22747 18.1979 4.01547 17.4449L29.6655 6.64495Z" fill="#031A16" />
+    </svg>
+
+  );
+};
+
 const ChevronDownIcon = () => {
   return (
     <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -71,4 +100,4 @@ const ChevronDownIcon = () => {
   );
 }
 
-export { FuntasyIcon, MenuIcon, TwitterIcon, TelegramIcon, ChevronDownIcon }
+export { FuntasyIcon, MenuIcon, TwitterIcon, TelegramIcon, ChevronDownIcon, TwitterBlackIcon, TelegramBlackIcon };

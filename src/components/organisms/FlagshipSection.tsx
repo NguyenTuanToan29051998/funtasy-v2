@@ -34,7 +34,7 @@ const FlagshipSection = () => {
 
 	return (
 		<>
-			<div className="bg-[#E0FFC4] h-auto lg:h-[900px] w-full] relative pt-[75px] lg:pt-[137px]">
+			<div className="bg-[#E0FFC4] h-auto lg:h-[900px] w-full relative pt-[75px] lg:pt-[137px]">
 				<div className='flex flex-col items-center'>
 					<div
 						className="hidden md:flex font-ppNeueMontrealMedium text-black text-[32px] font-light"
