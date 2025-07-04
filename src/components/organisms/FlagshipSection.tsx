@@ -75,7 +75,7 @@ const FlagshipSection = () => {
 	}, []);
 
 	return (
-		<div className="bg-[#E0FFC4] h-auto lg:h-[900px] w-full relative pt-[75px] lg:pt-[137px] overflow-hidden">
+		<div className="bg-[#E0FFC4] h-auto w-full relative pt-[75px] lg:pt-[137px] overflow-hidden">
 			<img
 				src={Ring1}
 				alt="ring"
@@ -100,7 +100,7 @@ const FlagshipSection = () => {
 							onMouseLeave={() => setHoverText(false)}
 						>
 							{chars1.map((char, i) => (
-								<div className="inline-block text-[#33998c] px-1 relative" key={i}>
+								<div className="inline-block px-1 relative" key={i}>
 									<div className={hoverText ? hoverClasses[i][0] : normalClasses[i][0]}>{char}</div>
 									<div className={hoverText ? hoverClasses[i][1] : normalClasses[i][1]}>{char}</div>
 								</div>
@@ -113,7 +113,7 @@ const FlagshipSection = () => {
 							onMouseLeave={() => setHoverText(false)}
 						>
 							{chars2.map((char, i) => (
-								<div className="inline-block text-[#33998c] px-1 relative" key={i}>
+								<div className="inline-block px-1 relative" key={i}>
 									<div className={hoverText ? hoverClasses[i][0] : normalClasses[i][0]}>{char}</div>
 									<div className={hoverText ? hoverClasses[i][1] : normalClasses[i][1]}>{char}</div>
 								</div>
@@ -178,7 +178,7 @@ const FlagshipSection = () => {
 						</div>
 					</div>
 				</div>
-				<div className="mb-[75px] lg:mb-0 w-full max-w-[306px] md:max-w-[1002px] rounded-xl py-[22px] border border-[#5EC09F] lg:mx-auto grid grid-cols-2 gap-y-4 md:flex md:h-[99px]">
+				<div className="mb-[75px] lg:mb-[55px] w-full max-w-[306px] md:max-w-[1002px] rounded-xl py-[22px] border border-[#5EC09F] lg:mx-auto grid grid-cols-2 gap-y-4 md:flex md:h-[99px]">
 					<div className="flex gap-[6px] w-full flex-col items-center py-2">
 						<span className="text-[15px] font-normal leading-[100%] text-center text-[#186B4F]">Total Users</span>
 						<div className='flex items-center text-[26px] font-medium leading-[100%] text-center text-[#1E1E1E] font-ppNeueMontrealMedium'>

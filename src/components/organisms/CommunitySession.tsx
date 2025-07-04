@@ -23,7 +23,7 @@ const CommunitySession = () => {
 						This is <span className="text-white">community-first</span>,<br className="hidden md:block" /> always.
 					</h2>
 					<div className="flex justify-center items-center gap-4 flex-wrap">
-						<div className='relative group inline-block w-full lg:w-auto'>
+						<div className='relative group inline-block w-auto'>
 							<button className="font-ppNeueMontrealMedium bg-[#CEF17B] text-black text-sm lg:text-base px-3 py-[10px] lg:px-4 lg:py-2 rounded-full hover:opacity-85 transition">
 								Start trading
 							</button>
@@ -32,7 +32,7 @@ const CommunitySession = () => {
 								<div className='absolute -bottom-[4px] left-1/2 transform -translate-x-1/2 w-2 h-2 bg-black rotate-45'></div>
 							</div>
 						</div>
-						<div className='relative group inline-block w-full lg:w-auto'>
+						<div className='relative group inline-block w-auto'>
 							<button className="font-ppNeueMontrealMedium bg-[#CEF17B] text-black text-sm lg:text-base px-3 py-[10px] lg:px-4 lg:py-2 rounded-full hover:opacity-85 transition">
 								Create tokens
 							</button>
@@ -51,7 +51,7 @@ const CommunitySession = () => {
 					</div>
 					<div className="pt-[38px] lg:pt-12 flex flex-col items-center gap-3 lg:gap-6 mt-[138px] lg:mt-[95px] bg-[#E0FFC4] text-black w-[289px] lg:w-[869px] h-[227px] rounded-3xl">
 						<p className="font-ppNeueMontrealMedium leading-[1.5] text-base lg:text-2xl font-medium lg:leading-snug max-w-[221px] lg:max-w-[614px] text-center">
-							Anyone can create, trade, and help shape <span className="italic">Funtasy</span> platform.
+							Anyone can create, trade, and help shape <span className="italic"><div className='lg:block hidden'></div>Funtasy</span> platform.
 							Reputation, community trust, and fair launches power the entire engine.
 						</p>
 						<p className="tex-[13px] lg:text-base text-black h-9 lg:h-10">

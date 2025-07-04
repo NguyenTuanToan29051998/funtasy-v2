@@ -27,14 +27,14 @@ const Header = ({ className }: { className?: string }) => {
     <>
       <div
         className={cn(
-          'fixed z-50 transition-[height] duration-500 bg-white px-3 w-[327px] h-[55px] items-center left-1/2 -translate-x-1/2 right-1/2 top-6 rounded-3xl lg:left-0 lg:right-0 lg:translate-x-0 lg:w-full lg:rounded-none lg:top-0 lg:px-0',
+          'fixed z-50 transition-[height] duration-500 bg-white px-3 w-[327px] h-[55px] lg:h-[67px] items-center left-1/2 -translate-x-1/2 right-1/2 top-6 rounded-3xl lg:left-0 lg:right-0 lg:translate-x-0 lg:w-full lg:rounded-none lg:top-0 lg:px-0',
           isOpenMenu ? '' : '',
           className,
         )}
       >
         <div className={
           cn(
-          'max-w-[1280px] mx-auto flex justify-between items-center relative h-[55px]',
+          'max-w-[1280px] mx-auto flex justify-between items-center relative h-[55px] lg:h-[67px]',
         )}>
           <button onClick={() => navigate('/')} className="flex items-center gap-3">
             <FuntasyIcon />
@@ -94,7 +94,7 @@ const Header = ({ className }: { className?: string }) => {
             </div>
           </div>
 
-          <button type="button" className='hidden lg:flex items-center justify-center w-[121px] h-[37px] rounded-3xl bg-[#CEF17B] text-black text-base hover:opacity-85'>
+          <button type="button" className='font-ppNeueMontrealMedium hidden lg:flex items-center justify-center w-[121px] h-[37px] rounded-3xl bg-[#CEF17B] text-black text-base hover:opacity-85'>
             Launch App
           </button>
 
