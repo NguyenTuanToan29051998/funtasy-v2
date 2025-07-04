@@ -128,10 +128,22 @@ const Header = ({ className }: { className?: string }) => {
               transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
             >
               <div className="w-full flex flex-col">
-                <div className="py-3 text-center font-ppNeueMontrealMedium text-base text-[#000000DB] border-b border-solid border-[#0000001F] leading-[19px]">Docs</div>
-                <div className="py-3 text-center font-ppNeueMontrealMedium text-base text-[#000000DB] border-b border-solid border-[#0000001F] leading-[19px]">Earn Points</div>
-                <div className="py-3 text-center font-ppNeueMontrealMedium text-base text-[#000000DB] border-b border-solid border-[#0000001F] leading-[19px]">X/Twitter</div>
-                <div className="py-3 text-center font-ppNeueMontrealMedium text-base text-[#000000DB] leading-[19px]">Telegram Channel</div>
+                <div className="py-3 text-center font-ppNeueMontrealMedium text-base text-[#000000DB] border-b border-solid border-[#0000001F] leading-[19px]">
+                  <a href='https://help.funtasy.game/' target='_blank'>
+                  Docs
+                  </a>
+                </div>
+                <div className="py-3 text-center font-ppNeueMontrealMedium text-base text-[#000000DB] border-b border-solid border-[#0000001F] leading-[19px]">
+                  <a href='https://cattos.io/' target='_blank'>
+                  Earn Points
+                  </a>
+                  </div>
+                <div className="py-3 text-center font-ppNeueMontrealMedium text-base text-[#000000DB] border-b border-solid border-[#0000001F] leading-[19px]">
+                 <a href='https://x.com/thefuntasy' target='_blank'>
+                   X/Twitter
+                  </a>
+                  </div>
+                {/* <div className="py-3 text-center font-ppNeueMontrealMedium text-base text-[#000000DB] leading-[19px]">Telegram Channel</div> */}
               </div>
               <button
                 type="button"
