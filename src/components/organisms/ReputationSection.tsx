@@ -9,8 +9,8 @@ const ReputationSection = () => {
         The <span className="text-[#DCEE48]"><span className='italic mr-[1px]'>Fun</span>tasy</span> reputation-driven social-fi
       </h2>
       <div className="px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 mx-auto max-w-[1096px] max-h-[517px]">
-        <div className="border border-[#E8FFA766] rounded-3xl flex flex-col items-center">
-          <div className="text-sm lg:text-xl text-white p-6">
+        <div className="border border-[#E8FFA766] rounded-3xl flex flex-col items-center h-[380px] lg:h-[517px]">
+          <div className="text-base lg:text-xl text-white p-6">
             We merge <span className="text-[#DFEC2A]">on-chain activity</span> and <span className="text-[#DFEC2A]">social data</span> with AI to generate
             <span className="inline-flex items-center gap-1 bg-[#E9FFAD] text-black text-base rounded-xl w-[155px] h-[21px] ml-2 align-middle justify-center">
               <span className="-mt-[2px]">user trust scores</span>
@@ -28,16 +28,15 @@ const ReputationSection = () => {
             className="w-auto h-auto"
           />
         </div>
-
-        <div className="border border-[#E8FFA766] rounded-3xl flex flex-col items-center h-[517px]">
-          <p className="text-sm lg:text-xl text-white p-6">
+        <div className="border border-[#E8FFA766] rounded-3xl flex flex-col items-center h-[446px] lg:h-[517px]">
+          <p className="text-base lg:text-xl text-white p-6">
             Your <span className="text-[#DFEC2A]">reputation</span>. Your <span className="text-[#DFEC2A]">engagement</span>. Your <span className="text-[#DFEC2A]">rewards</span>.<br />
             Earn points and unlock real value for everything you do.
           </p>
           <img
             src={DonutChart}
             alt="Ring system"
-            className="w-[420px] h-auto"
+            className="w-[300px] lg:w-[420px] h-auto rounded-4xl"
           />
         </div>
       </div>

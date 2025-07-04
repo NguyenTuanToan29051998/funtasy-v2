@@ -23,13 +23,13 @@ const CommunitySession = () => {
 						This is <span className="text-white">community-first</span>,<br className="hidden md:block" /> always.
 					</h2>
 					<div className="flex justify-center items-center gap-4 flex-wrap">
-						<button className="font-ppNeueMontrealMedium bg-[#CEF17B] text-black text-sm lg:text-base px-3 py-[10px] lg:px-4 lg:py-2 rounded-full hover:opacity-90 transition">
+						<button className="font-ppNeueMontrealMedium bg-[#CEF17B] text-black text-sm lg:text-base px-3 py-[10px] lg:px-4 lg:py-2 rounded-full hover:opacity-85 transition">
 							Start trading
 						</button>
-						<button className="font-ppNeueMontrealMedium bg-[#CEF17B] text-black text-sm lg:text-base px-3 py-[10px] lg:px-4 lg:py-2 rounded-full hover:opacity-90 transition">
+						<button className="font-ppNeueMontrealMedium bg-[#CEF17B] text-black text-sm lg:text-base px-3 py-[10px] lg:px-4 lg:py-2 rounded-full hover:opacity-85 transition">
 							Create tokens
 						</button>
-						<button className="font-ppNeueMontrealMedium bg-[#CEF17B] text-black text-sm lg:text-base px-3 py-[10px] lg:px-4 lg:py-2 rounded-full hover:opacity-90 transition">
+						<button className="font-ppNeueMontrealMedium bg-[#CEF17B] text-black text-sm lg:text-base px-3 py-[10px] lg:px-4 lg:py-2 rounded-full hover:opacity-85 transition">
 							Earn points
 						</button>
 					</div>
