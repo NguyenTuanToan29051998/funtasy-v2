@@ -1,4 +1,3 @@
-import bannerVideo from '../../assets/images/bg-banner.mp4';
 import Logo from '../../assets/images/logo.gif';
 
 const BannerSession = () => {
@@ -7,7 +6,7 @@ const BannerSession = () => {
 		<div className="relative h-screen w-full flex items-center justify-center overflow-hidden z-10">
 			<video
 				className="absolute top-0 left-0 w-full h-full object-cover z-[-1] object-left lg:object-cover"
-				src={bannerVideo}
+				src={'https://game.cattos.io/bg-funtasy.mp4'}
 				autoPlay
 				loop
 				muted

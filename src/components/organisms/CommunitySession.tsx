@@ -59,6 +59,12 @@ const CommunitySession = () => {
 						</p>
 					</div>
 				</div>
+				<div
+				className="absolute w-full h-[141px] bottom-0 opacity-100 z-10"
+				style={{
+					background: 'linear-gradient(180deg, rgba(6, 28, 21, 0) 0%, #061C15 100%)'
+				}}
+			/>
 			</div>
 			<div className="relative h-[298px] lg:h-[450px] bg-[#061C15]">
 				<div
@@ -74,6 +80,7 @@ const CommunitySession = () => {
 					</p>
 				</div>
 			</div>
+
 		</>
 	);
 };

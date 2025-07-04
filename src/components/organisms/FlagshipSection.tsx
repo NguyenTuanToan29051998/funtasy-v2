@@ -1,47 +1,22 @@
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import CountUp from 'react-countup';
+import { PointsApiManagement } from '../../api-clients/fpoit';
+import apiRequest from '../../api-clients/user';
 import FuntasyChart from '../../assets/images/funtasy-chart.png';
-import ScaleIcon from '../../assets/images/scale-icon.gif';
 import LayoutGrid from '../../assets/images/layout-grid.gif';
 import LineChart from '../../assets/images/line-chart.gif';
-import Sparkles from '../../assets/images/sparkles-icon.gif';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import apiRequest from '../../api-clients/user';
-import CountUp from 'react-countup';
-import { getShortNumber, getUnitSuffix } from '../../helpers';
-import { PointsApiManagement } from '../../api-clients/fpoit';
 import Ring1 from '../../assets/images/ring-1.png';
 import Ring2 from '../../assets/images/ring-2.png';
+import ScaleIcon from '../../assets/images/scale-icon.gif';
+import Sparkles from '../../assets/images/sparkles-icon.gif';
+import { getShortNumber, getUnitSuffix } from '../../helpers';
 
 const FlagshipSection = () => {
-	const [hoverText, setHoverText] = useState(false);
 	const [totalUsers, setTotalUsers] = useState<number>();
 	const [totalFPoints, setTotalFPoints] = useState<number>();
 	const [totalWallets, setTotalWallets] = useState<number>();
 	const [totalTransactions, setTotalTransactions] = useState<number>();
-
-	const chars1 = "flagship".split("");
-	const chars2 = "platform".split("");
-
-	const normalClasses = [
-		["inline-block transition-transform duration-500 ease-out translate-y-0", "absolute top-0 transition-transform duration-500 ease-out translate-y-0"],
-		["inline-block transition-transform duration-500 ease-out translate-y-0", "absolute top-0 transition-transform duration-500 ease-out translate-y-0"],
-		["inline-block transition-transform duration-500 ease-out translate-y-0", "absolute top-0 transition-transform duration-500 ease-out translate-y-0"],
-		["inline-block transition-transform duration-500 ease-out translate-y-0", "absolute top-0 transition-transform duration-500 ease-out translate-y-0"],
-		["inline-block transition-transform duration-500 ease-out translate-y-0", "absolute top-0 transition-transform duration-500 ease-out translate-y-0"],
-		["inline-block transition-transform duration-500 ease-out translate-y-0", "absolute top-0 transition-transform duration-500 ease-out translate-y-0"],
-		["inline-block transition-transform duration-500 ease-out translate-y-0", "absolute top-0 transition-transform duration-500 ease-out translate-y-0"],
-		["inline-block transition-transform duration-500 ease-out translate-y-0", "absolute top-0 transition-transform duration-500 ease-out translate-y-0"]
-	];
-	const hoverClasses = [
-		["inline-block transition-transform duration-500 ease-out translate-y-0", "absolute top-0 transition-transform duration-500 ease-out translate-y-0"],
-		["inline-block transition-transform duration-500 ease-out translate-y-[16px]", "absolute top-0 transition-transform duration-500 ease-out -translate-y-[16px]"],
-		["inline-block transition-transform duration-500 ease-out translate-y-[37px]", "absolute top-0 transition-transform duration-500 ease-out -translate-y-[37px]"],
-		["inline-block transition-transform duration-500 ease-out translate-y-[64px]", "absolute top-0 transition-transform duration-500 ease-out -translate-y-[60px]"],
-		["inline-block transition-transform duration-500 ease-out translate-y-[80px]", "absolute top-0 transition-transform duration-500 ease-out -translate-y-[80px]"],
-		["inline-block transition-transform duration-500 ease-out translate-y-[64px]", "absolute top-0 transition-transform duration-500 ease-out -translate-y-[60px]"],
-		["inline-block transition-transform duration-500 ease-out translate-y-[30px]", "absolute top-0 transition-transform duration-500 ease-out -translate-y-[30px]"],
-		["inline-block transition-transform duration-500 ease-out translate-y-0", "absolute top-0 transition-transform duration-500 ease-out translate-y-0"]
-	];
 
 	useEffect(() => {
 		async function fetchAllData() {
@@ -89,38 +64,8 @@ const FlagshipSection = () => {
 			<div className='relative z-10 flex flex-col items-center'>
 				<div
 					className="hidden md:flex font-ppNeueMontrealMedium text-black text-[32px] font-light"
-					onMouseEnter={() => setHoverText(true)}
-					onMouseLeave={() => setHoverText(false)}
 				>
-					Meet the
-					<div className="flex px-[6px] text-[#084734]">
-						<div
-							className="css-f90u5u flex"
-							onMouseEnter={() => setHoverText(true)}
-							onMouseLeave={() => setHoverText(false)}
-						>
-							{chars1.map((char, i) => (
-								<div className="inline-block px-1 relative" key={i}>
-									<div className={hoverText ? hoverClasses[i][0] : normalClasses[i][0]}>{char}</div>
-									<div className={hoverText ? hoverClasses[i][1] : normalClasses[i][1]}>{char}</div>
-								</div>
-							))}
-						</div>
-						<span className="w-2 inline-block"></span>
-						<div
-							className="css-f90u5u flex"
-							onMouseEnter={() => setHoverText(true)}
-							onMouseLeave={() => setHoverText(false)}
-						>
-							{chars2.map((char, i) => (
-								<div className="inline-block px-1 relative" key={i}>
-									<div className={hoverText ? hoverClasses[i][0] : normalClasses[i][0]}>{char}</div>
-									<div className={hoverText ? hoverClasses[i][1] : normalClasses[i][1]}>{char}</div>
-								</div>
-							))}
-						</div>
-					</div>
-					on Aptos
+					Meet the <span className='text-[#084734]'>&nbsp;f l a g s h i p&nbsp;&nbsp;p l a t f o r m&nbsp;</span>on Aptos
 				</div>
 				<p className="block md:hidden font-ppNeueMontrealMedium text-2xl font-neue-montreal text-center">
 					Meet the <span className='text-[#084734]'>f l a g s h i p <br />&nbsp;&nbsp; p l a t f o r m <br /></span>on Aptos
