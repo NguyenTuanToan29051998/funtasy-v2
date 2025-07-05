@@ -32,7 +32,7 @@ const BannerSession = () => {
 				<p
 					className="font-normal text-base leading-[1.2] text-center text-[#CEEDB2] max-w-[493px]"
 				>
-					A new standard for token trading — where <div className='lg:hidden'></div>AI-powered scoring of social reputation, <div className='lg:hidden'></div>community trust, and on-chain <div className='lg:hidden'></div>performance come together to launch <div className='lg:hidden'></div>what truly matters (and <span className="italic">fun</span>).
+					A new standard for token trading — where <br className="block md:hidden" />AI-powered scoring of social reputation, <br className="block md:hidden" />community trust, and on-chain <br className="block md:hidden" />performance come together to launch <br className="block md:hidden" />what truly matters (and <span className="italic">fun</span>).
 				</p>
 				<div className="mt-[52px] lg:mt-6 flex gap-6">
 					<div className='relative group inline-block w-full lg:w-auto'>

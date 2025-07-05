@@ -1,17 +1,27 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import useOutsideClick from '../../hooks/outside-click';
 import useResizeScreen from '../../hooks/resize-screen';
 import { cn } from '../../utils';
 
-import { ChevronDownIcon, FuntasyIcon, MenuIcon, TwitterIcon } from '../../assets/icons';
+import { ChevronDownIcon, FuntasyIcon, FuntasyWhiteIcon, MenuIcon, TwitterIcon } from '../../assets/icons';
 import { Button } from '../atoms/modals/button';
 
 const Header = ({ className }: { className?: string }) => {
   const { widthScreen } = useResizeScreen();
-  const [isOpenMenu, setIsOpenMenu] = useState(false);
+  const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
   const isMobile = widthScreen <= 1024;
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<boolean>(false);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   const dropdownRef = useOutsideClick(() => {
     setTimeout(() => {
@@ -26,26 +36,27 @@ const Header = ({ className }: { className?: string }) => {
     <>
       <div
         className={cn(
-          'fixed z-50 transition-[height] duration-500 bg-white px-3 w-[327px] h-[55px] lg:h-[67px] items-center left-1/2 -translate-x-1/2 right-1/2 top-6 rounded-3xl lg:left-0 lg:right-0 lg:translate-x-0 lg:w-full lg:rounded-none lg:top-0 lg:px-0',
-          isOpenMenu ? '' : '',
+          'fixed z-50 transition-all duration-500 ease-in-out px-3 w-[327px] h-[55px] lg:h-[67px] items-center left-1/2 -translate-x-1/2 right-1/2 top-6 rounded-3xl lg:left-0 lg:right-0 lg:translate-x-0 lg:w-full lg:rounded-none lg:top-0 lg:px-0',
+          isScrolled ? 'bg-white' : 'bg-transparent',
           className,
         )}
       >
         <div className={
           cn(
-          'max-w-[1280px] mx-auto flex justify-between items-center relative h-[55px] lg:h-[67px]',
-        )}>
+            'max-w-[1280px] mx-auto flex justify-between items-center relative h-[55px] lg:h-[67px]',
+          )}>
           <button onClick={() => window.location.href = '/'} className="flex items-center gap-3">
-            <FuntasyIcon />
-            <p className='text-black font-normal text-[20px] tracking-[0%] text-center !mb-0'><span className='italic mr-[2px]'>Fun</span>tasy</p>
+            {isScrolled ? <FuntasyIcon /> : <FuntasyWhiteIcon />}
+
+            <p className={`font-normal text-[20px] tracking-[0%] text-center !mb-0 ${isScrolled ? 'text-black' : 'text-white'}`}><span className='italic mr-[2px]'>Fun</span>tasy</p>
           </button>
           <div className='hidden lg:flex items-center gap-6 text-white pointer-events-auto h-full justify-center'>
-            <div className="flex items-center gap-6 h-full relative">
+            <div className={`flex items-center gap-6 h-full relative ${isScrolled ? 'text-[#000000DB]' : 'text-white'}`}>
               <a
                 href="https://help.funtasy.game/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`font-ppNeueMontrealMedium text-base h-full content-center px-4 text-[#000000DB] border-none hover:cursor-pointer hover:underline`}
+                className={`font-ppNeueMontrealMedium text-base h-full content-center px-4 border-none hover:cursor-pointer hover:underline`}
               >
                 Docs
               </a>
@@ -53,17 +64,17 @@ const Header = ({ className }: { className?: string }) => {
                 href="https://cattos.io/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`font-ppNeueMontrealMedium text-base h-full content-center px-4 text-[#000000DB] border-none hover:cursor-pointer hover:underline`}
+                className={`font-ppNeueMontrealMedium text-base h-full content-center px-4 border-none hover:cursor-pointer hover:underline`}
               >
                 Earn Points
               </a>
               <div>
                 <button
                   onClick={() => setOpen(!open)}
-                  className="font-ppNeueMontrealMedium bg-[#0000001A] text-[#000000DB] w-[100px] h-[31px] rounded-xl flex items-center justify-center gap-[10px] text-base hover:cursor-pointer hover:opacity-85 transition"
+                  className="font-ppNeueMontrealMedium bg-[#0000001A] w-[100px] h-[31px] rounded-xl flex items-center justify-center gap-[10px] text-base hover:cursor-pointer hover:opacity-85 transition"
                 >
                   Social
-                  <ChevronDownIcon />
+                  {ChevronDownIcon(isScrolled ? 'black' : 'white')}
                 </button>
                 {open && (
                   <div
@@ -114,7 +125,7 @@ const Header = ({ className }: { className?: string }) => {
             className='lg:hidden'
             onClick={toggleMenu}
           >
-            <MenuIcon fill={'black'} />
+            <MenuIcon fill={isScrolled ? 'black': 'white'} />
           </button>
         </div>
       </div>
