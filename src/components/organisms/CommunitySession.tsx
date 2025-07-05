@@ -70,7 +70,7 @@ const CommunitySession = () => {
 				/>
 				<div className="mt-8 lg:mt-0 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[294px] lg:w-auto">
 					<p className="text-xl leading-[17px] lg:text-4xl lg:leading-12 tracking-[0] text-white text-center">
-						Powered by Aptos by <span className="text-[#CEF17B]">Aptos</span>
+						Powered by <span className="text-[#CEF17B]">Aptos</span>
 					</p>
 					<p className="mt-3 text-base lg:text-[18px] leading-[1] font-normal text-center text-[#FFFFFF91] max-w-[610px]">
 						Proudly supported by the Aptos, empowering global trading engine through secure, scalable infrastructure.
