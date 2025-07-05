@@ -25,7 +25,7 @@ const ReputationSection = () => {
           <img
             src={Pyramid}
             alt="Pyramid"
-            className="w-auto h-auto"
+            className="w-[320px] lg:w-auto h-auto"
           />
         </div>
         <div className="border border-[#E8FFA766] rounded-3xl flex flex-col items-center h-[446px] lg:h-[517px]">

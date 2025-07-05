@@ -1,4 +1,5 @@
 import Logo from '../../assets/images/logo.gif';
+import { Button } from '../atoms/modals/button';
 
 const BannerSession = () => {
 
@@ -19,23 +20,24 @@ const BannerSession = () => {
 					className="w-[87px] h-[87px]"
 				/>
 				<h2
-					className="mt-6 mb-11 lg:my-6 font-ppNeueMontrealMedium font-medium text-2xl lg:text-[48px] leading-[1.2] tracking-[0%] text-center bg-gradient-to-r from-[#DDEE2B] to-[#FFFFE9] bg-clip-text text-transparent whitespace-pre-line"
+					className="block md:hidden mt-6 mb-11 font-ppNeueMontrealMedium font-medium text-2xl leading-[1.2] tracking-[0%] text-center bg-gradient-to-r from-[#DDEE2B] to-[#FFFFE9] bg-clip-text text-transparent whitespace-pre-line"
 				>
-					{`Innovative token launch platform with
-              AI-powered social-fi engine`}
+					{`Innovative token\nlaunch platform with\nAI-powered social-fi engine`}
+				</h2>
+				<h2
+					className="hidden md:block mt-6 mb-11 lg:my-6 font-ppNeueMontrealMedium font-medium text-[48px] leading-[1.2] tracking-[0%] text-center bg-gradient-to-r from-[#DDEE2B] to-[#FFFFE9] bg-clip-text text-transparent whitespace-pre-line"
+				>
+					{`Innovative token launch platform with\nAI-powered social-fi engine`}
 				</h2>
 				<p
 					className="font-normal text-base leading-[1.2] text-center text-[#CEEDB2] max-w-[493px]"
 				>
-					A new standard for token trading — where AI-powered scoring of social reputation, community trust, and on-chain performance come together to launch what truly matters (and <span className="italic">fun</span>).
+					A new standard for token trading — where <div className='lg:hidden'></div>AI-powered scoring of social reputation, <div className='lg:hidden'></div>community trust, and on-chain <div className='lg:hidden'></div>performance come together to launch <div className='lg:hidden'></div>what truly matters (and <span className="italic">fun</span>).
 				</p>
 				<div className="mt-[52px] lg:mt-6 flex gap-6">
 					<div className='relative group inline-block w-full lg:w-auto'>
-						<button className="relative font-ppNeueMontrealMedium w-[155px] h-[39px] bg-black text-black hover:text-white rounded-3xl overflow-hidden group">
-							<span className="relative z-10 transition-colors duration-150">Start trading</span>
-							<span className="absolute inset-0 bg-[#CEF17B] group-hover:scale-x-0 transition-transform duration-150 ease-in-out origin-center z-0"></span>
-						</button>
-						<div className='absolute bottom-full mb-2 hidden group-hover:block bg-black text-white text-base rounded px-3 py-1 whitespace-nowrap z-10 font-ppNeueMontreal left-1/2 transform -translate-x-1/2'>
+						<Button className='w-[155px] h-[39px]'>Start trading</Button>
+						<div className='absolute bottom-full mb-2 hidden group-active:block group-focus:block group-hover:block bg-black text-white text-base rounded px-3 py-1 whitespace-nowrap z-10 font-ppNeueMontreal left-1/2 transform -translate-x-1/2'>
 							Coming soon
 							<div className='absolute -bottom-[4px] left-1/2 transform -translate-x-1/2 w-2 h-2 bg-black rotate-45'></div>
 						</div>
@@ -44,7 +46,7 @@ const BannerSession = () => {
 						<button className="font-ppNeueMontrealMedium w-[155px] h-[39px] py-[10px] gap-[10px] rounded-full border border-[#CEF17B] flex items-center justify-center !text-[#CEF17B] text-base font-medium hover:opacity-85">
 							Create Tokens
 						</button>
-						<div className='absolute bottom-full mb-2 hidden group-hover:block bg-black text-white text-base rounded px-3 py-1 whitespace-nowrap z-10 font-ppNeueMontreal left-1/2 transform -translate-x-1/2'>
+						<div className='absolute bottom-full mb-2 hidden group-active:block group-focus:block group-hover:block bg-black text-white text-base rounded px-3 py-1 whitespace-nowrap z-10 font-ppNeueMontreal left-1/2 transform -translate-x-1/2'>
 							Coming soon
 							<div className='absolute -bottom-[4px] left-1/2 transform -translate-x-1/2 w-2 h-2 bg-black rotate-45'></div>
 						</div>

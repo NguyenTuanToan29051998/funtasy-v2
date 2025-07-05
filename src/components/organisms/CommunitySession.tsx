@@ -26,14 +26,14 @@ const CommunitySession = () => {
 					<div className="flex justify-center items-center gap-4 flex-wrap">
 						<div className='relative group inline-block w-auto'>
 							<Button>Start trading</Button>
-							<div className='absolute bottom-full mb-2 hidden group-hover:block bg-black text-white text-base rounded px-3 py-1 whitespace-nowrap z-10 font-ppNeueMontreal left-1/2 transform -translate-x-1/2'>
+							<div className='absolute bottom-full mb-2 hidden group-active:block group-focus:block group-hover:block bg-black text-white text-base rounded px-3 py-1 whitespace-nowrap z-10 font-ppNeueMontreal left-1/2 transform -translate-x-1/2'>
 								Coming soon
 								<div className='absolute -bottom-[4px] left-1/2 transform -translate-x-1/2 w-2 h-2 bg-black rotate-45'></div>
 							</div>
 						</div>
 						<div className='relative group inline-block w-auto'>
 							<Button>Create tokens</Button>
-							<div className='absolute bottom-full mb-2 hidden group-hover:block bg-black text-white text-base rounded px-3 py-1 whitespace-nowrap z-10 font-ppNeueMontreal left-1/2 transform -translate-x-1/2'>
+							<div className='absolute bottom-full mb-2 hidden group-active:block group-focus:block group-hover:block bg-black text-white text-base rounded px-3 py-1 whitespace-nowrap z-10 font-ppNeueMontreal left-1/2 transform -translate-x-1/2'>
 								Coming soon
 								<div className='absolute -bottom-[4px] left-1/2 transform -translate-x-1/2 w-2 h-2 bg-black rotate-45'></div>
 							</div>

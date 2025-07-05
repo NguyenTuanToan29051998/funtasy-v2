@@ -5,6 +5,7 @@ import useResizeScreen from '../../hooks/resize-screen';
 import { cn } from '../../utils';
 
 import { ChevronDownIcon, FuntasyIcon, MenuIcon, TwitterIcon } from '../../assets/icons';
+import { Button } from '../atoms/modals/button';
 
 const Header = ({ className }: { className?: string }) => {
   const { widthScreen } = useResizeScreen();
@@ -92,14 +93,21 @@ const Header = ({ className }: { className?: string }) => {
             </div>
           </div>
 
-          <button className="relative font-ppNeueMontrealMedium hidden lg:flex items-center justify-center w-[121px] h-[37px] rounded-3xl bg-[#CEF17B] text-black text-base overflow-hidden group">
+          {/* <button className="relative font-ppNeueMontrealMedium hidden lg:flex items-center justify-center w-[121px] h-[37px] rounded-3xl bg-[#CEF17B] text-black text-base overflow-hidden group">
             <span
               className="absolute inset-0 bg-black z-0 rounded-full origin-center transition-transform duration-200 scale-x-0 group-hover:scale-x-100"
             ></span>
             <span className="relative z-10 transition-colors duration-200 group-hover:text-white">
               Launch App
             </span>
-          </button>
+          </button> */}
+          <div className='relative group inline-block'>
+            <Button className='hidden lg:flex items-center justify-center w-[121px] h-[37px] rounded-3xl bg-[#CEF17B] text-black text-base'>Launch App</Button>
+            <div className='absolute top-full mt-2 hidden group-active:block group-focus:block group-hover:block bg-black text-white text-sm rounded px-3 py-1 whitespace-nowrap z-10 font-ppNeueMontreal left-1/2 transform -translate-x-1/2'>
+              Coming soon
+              <div className='-top-[2px] absolute left-1/2 transform -translate-x-1/2 bottom-full w-2 h-2 bg-black rotate-45'></div>
+            </div>
+          </div>
 
           <button
             type="button"
@@ -162,12 +170,18 @@ const Header = ({ className }: { className?: string }) => {
                 </div>
                 {/* <div className="py-3 text-center font-ppNeueMontrealMedium text-base text-[#000000DB] leading-[19px]">Telegram Channel</div> */}
               </div>
-              <button
-                type="button"
-                className="mb-3 w-full h-[44px] rounded-3xl bg-[#CEF17B] text-black text-base font-ppNeueMontrealMedium hover:opacity-85"
-              >
-                Launch App
-              </button>
+              <div className='relative group inline-block w-full lg:w-auto'>
+                <button
+                  type="button"
+                  className="mb-3 w-full h-[44px] rounded-3xl bg-[#CEF17B] text-black text-base font-ppNeueMontrealMedium hover:opacity-85"
+                >
+                  Launch App
+                </button>
+                <div className='absolute bottom-full mb-2 hidden group-active:block group-focus:block group-hover:block bg-black text-white text-base rounded px-3 py-1 whitespace-nowrap z-10 font-ppNeueMontreal left-1/2 transform -translate-x-1/2'>
+                  Coming soon
+                  <div className='absolute -bottom-[4px] left-1/2 transform -translate-x-1/2 w-2 h-2 bg-black rotate-45'></div>
+                </div>
+              </div>
             </motion.div>
           </>
         )}
