@@ -1,7 +1,10 @@
+import { useNavigate } from 'react-router-dom';
 import { TwitterBlackIcon } from '../../assets/icons';
 import LogoBlack from '../../assets/images/logo-black.gif';
 
 const Footer = () => {
+	const navigate = useNavigate();
+	
 	return (
 		<footer className="bg-[#E2FFBE] h-[259px] px-[22px] xl:px-0 flex flex-col justify-end">
 			<div className='relative max-w-[1341px] w-full h-[259px] mx-auto'>
@@ -23,7 +26,7 @@ const Footer = () => {
 						<TelegramBlackIcon />
 					</a> */}
 				</div>
-				<div className='flex md:hidden items-center justify-center'>
+				<div className='flex md:hidden items-center justify-center hover:cursor-pointer' onClick={() => navigate('/')}>
 					<img src={LogoBlack} alt="Logo" className="w-[87px] h-[87px]" />
 				</div>
 			</div>
@@ -32,7 +35,7 @@ const Footer = () => {
 					<span>2025</span>
 					<a href="#" className="hover:underline ml-3.5 ml:mr-0">Terms & Conditions</a>
 				</div>
-				<div className="hidden md:flex items-center justify-center h-full">
+				<div className="hidden md:flex items-center justify-center h-full hover:cursor-pointer" onClick={() => navigate('/')}>
 					<img src={LogoBlack} alt="Logo" className="w-[87px] h-[87px]" />
 				</div>
 				<div className="flex flex-col md:flex-row gap-6 items-end md:items-center justify-end h-full">

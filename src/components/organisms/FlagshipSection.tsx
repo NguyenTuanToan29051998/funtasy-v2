@@ -54,12 +54,12 @@ const FlagshipSection = () => {
 			<img
 				src={Ring1}
 				alt="ring"
-				className="absolute left-1/2 top-1/2 min-w-[1077px] h-[1077px] min-h-[1077px] object-cover object-left -translate-x-1/2 -translate-y-1/2 animate-spin-alternate pointer-events-none select-none"
+				className="absolute left-1/2 top-1/2 min-w-[1077px] h-[1077px] min-h-[1077px] object-cover object-left -translate-x-1/2 -translate-y-1/2 animate-spin-alternate pointer-events-none"
 			/>
 			<img
 				src={Ring2}
 				alt="ring"
-				className="absolute left-1/2 top-1/2 min-w-[787px] h-[787px] min-h-[787px] object-cover object-left -translate-x-1/2 -translate-y-1/2 animate-spin-alternate pointer-events-none select-none"
+				className="absolute left-1/2 top-1/2 min-w-[787px] h-[787px] min-h-[787px] object-cover object-left -translate-x-1/2 -translate-y-1/2 animate-spin-alternate pointer-events-none"
 			/>
 			<div className='relative z-10 flex flex-col items-center'>
 				<div

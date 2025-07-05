@@ -75,10 +75,10 @@ const Header = ({ className }: { className?: string }) => {
                       href="https://x.com/thefuntasy"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-between px-3 py-[13px] hover:bg-white/20 rounded-tl-xl rounded-tr-xl transition"
+                      className="flex items-center justify-between px-3 py-[13px] rounded-xl transition hover:text-[#E0FFC4] group"
                       onClick={() => setOpen(false)}
                     >
-                      X/Twitter <TwitterIcon />
+                      X/Twitter <TwitterIcon className="group-hover:text-[#E0FFC4]" />
                     </a>
                     {/* <a
                       href="https://t.me"
@@ -108,7 +108,6 @@ const Header = ({ className }: { className?: string }) => {
         </div>
       </div>
 
-      {/* Menu mobile xổ xuống */}
       <AnimatePresence>
         {isOpenMenu && isMobile && (
           <>
@@ -129,20 +128,35 @@ const Header = ({ className }: { className?: string }) => {
             >
               <div className="w-full flex flex-col">
                 <div className="py-3 text-center font-ppNeueMontrealMedium text-base text-[#000000DB] border-b border-solid border-[#0000001F] leading-[19px]">
-                  <a href='https://help.funtasy.game/' target='_blank'>
-                  Docs
+                  <a
+                    href="https://help.funtasy.game/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={closeMenu}
+                  >
+                    Docs
                   </a>
                 </div>
                 <div className="py-3 text-center font-ppNeueMontrealMedium text-base text-[#000000DB] border-b border-solid border-[#0000001F] leading-[19px]">
-                  <a href='https://cattos.io/' target='_blank'>
-                  Earn Points
+                  <a
+                    href="https://cattos.io/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={closeMenu}
+                  >
+                    Earn Points
                   </a>
-                  </div>
+                </div>
                 <div className="py-3 text-center font-ppNeueMontrealMedium text-base text-[#000000DB] border-b border-solid border-[#0000001F] leading-[19px]">
-                 <a href='https://x.com/thefuntasy' target='_blank'>
-                   X/Twitter
+                  <a
+                    href="https://x.com/thefuntasy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={closeMenu}
+                  >
+                    X/Twitter
                   </a>
-                  </div>
+                </div>
                 {/* <div className="py-3 text-center font-ppNeueMontrealMedium text-base text-[#000000DB] leading-[19px]">Telegram Channel</div> */}
               </div>
               <button

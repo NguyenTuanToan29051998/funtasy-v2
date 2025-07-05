@@ -41,14 +41,14 @@ const MenuIcon = ({ fill = 'white', ...props }: React.SVGProps<SVGSVGElement>) =
   );
 };
 
-const TwitterIcon = () => {
+const TwitterIcon = ({ className, ...props }: React.SVGProps<SVGSVGElement>) => {
   return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} {...props}>
       <mask id="mask0_2_972" style={{ maskType: 'luminance' }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
         <path d="M0 0H24V24H0V0Z" fill="white" />
       </mask>
       <g mask="url(#mask0_2_972)">
-        <path d="M17.75 3.33339H20.8171L14.1171 10.6749L22 20.6667H15.8286L10.9914 14.608L5.46286 20.6667H2.39286L9.55857 12.8115L2 3.33476H8.32857L12.6943 8.87164L17.75 3.33339ZM16.6714 18.9072H18.3714L7.4 5.00142H5.57714L16.6714 18.9072Z" fill="white" />
+        <path d="M17.75 3.33339H20.8171L14.1171 10.6749L22 20.6667H15.8286L10.9914 14.608L5.46286 20.6667H2.39286L9.55857 12.8115L2 3.33476H8.32857L12.6943 8.87164L17.75 3.33339ZM16.6714 18.9072H18.3714L7.4 5.00142H5.57714L16.6714 18.9072Z" fill="currentColor" />
       </g>
     </svg>
   );

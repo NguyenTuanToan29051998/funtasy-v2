@@ -2,6 +2,7 @@ import Community from '../../assets/images/community.gif';
 import CommunityMobile from '../../assets/images/community-mobile.png';
 import BgAptos from '../../assets/images/bg-aptos.png';
 import useResizeScreen from '../../hooks/resize-screen';
+import { Button } from '../atoms/modals/button';
 
 const CommunitySession = () => {
 
@@ -24,18 +25,14 @@ const CommunitySession = () => {
 					</h2>
 					<div className="flex justify-center items-center gap-4 flex-wrap">
 						<div className='relative group inline-block w-auto'>
-							<button className="font-ppNeueMontrealMedium bg-[#CEF17B] text-black text-sm lg:text-base px-3 py-[10px] lg:px-4 lg:py-2 rounded-full hover:opacity-85 transition">
-								Start trading
-							</button>
+							<Button>Start trading</Button>
 							<div className='absolute bottom-full mb-2 hidden group-hover:block bg-black text-white text-base rounded px-3 py-1 whitespace-nowrap z-10 font-ppNeueMontreal left-1/2 transform -translate-x-1/2'>
 								Coming soon
 								<div className='absolute -bottom-[4px] left-1/2 transform -translate-x-1/2 w-2 h-2 bg-black rotate-45'></div>
 							</div>
 						</div>
 						<div className='relative group inline-block w-auto'>
-							<button className="font-ppNeueMontrealMedium bg-[#CEF17B] text-black text-sm lg:text-base px-3 py-[10px] lg:px-4 lg:py-2 rounded-full hover:opacity-85 transition">
-								Create tokens
-							</button>
+							<Button>Create tokens</Button>
 							<div className='absolute bottom-full mb-2 hidden group-hover:block bg-black text-white text-base rounded px-3 py-1 whitespace-nowrap z-10 font-ppNeueMontreal left-1/2 transform -translate-x-1/2'>
 								Coming soon
 								<div className='absolute -bottom-[4px] left-1/2 transform -translate-x-1/2 w-2 h-2 bg-black rotate-45'></div>
@@ -45,8 +42,8 @@ const CommunitySession = () => {
 							href="https://cattos.io/"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="font-ppNeueMontrealMedium bg-[#CEF17B] text-black text-sm lg:text-base px-3 py-[10px] lg:px-4 lg:py-2 rounded-full hover:opacity-85 transition">
-							Earn points
+						>
+							<Button>Earn points</Button>
 						</a>
 					</div>
 					<div className="pt-[38px] lg:pt-12 flex flex-col items-center gap-3 lg:gap-6 mt-[138px] lg:mt-[95px] bg-[#E0FFC4] text-black w-[289px] lg:w-[869px] h-[227px] rounded-3xl">
