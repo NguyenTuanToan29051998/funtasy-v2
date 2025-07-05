@@ -92,8 +92,13 @@ const Header = ({ className }: { className?: string }) => {
             </div>
           </div>
 
-          <button type="button" className='font-ppNeueMontrealMedium hidden lg:flex items-center justify-center w-[121px] h-[37px] rounded-3xl bg-[#CEF17B] text-black text-base hover:opacity-85'>
-            Launch App
+          <button className="relative font-ppNeueMontrealMedium hidden lg:flex items-center justify-center w-[121px] h-[37px] rounded-3xl bg-[#CEF17B] text-black text-base overflow-hidden group">
+            <span
+              className="absolute inset-0 bg-black z-0 rounded-full origin-center transition-transform duration-200 scale-x-0 group-hover:scale-x-100"
+            ></span>
+            <span className="relative z-10 transition-colors duration-200 group-hover:text-white">
+              Launch App
+            </span>
           </button>
 
           <button

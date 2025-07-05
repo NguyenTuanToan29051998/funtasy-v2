@@ -31,8 +31,9 @@ const BannerSession = () => {
 				</p>
 				<div className="mt-[52px] lg:mt-6 flex gap-6">
 					<div className='relative group inline-block w-full lg:w-auto'>
-						<button className="font-ppNeueMontrealMedium w-[155px] h-[37px] rounded-[24px] bg-[#CEF17B] !text-[#101010] font-medium flex items-center justify-center hover:opacity-85 transition">
-							Start trading
+						<button className="relative font-ppNeueMontrealMedium w-[155px] h-[39px] bg-black text-black hover:text-white rounded-3xl overflow-hidden group">
+							<span className="relative z-10 transition-colors duration-150">Start trading</span>
+							<span className="absolute inset-0 bg-[#CEF17B] group-hover:scale-x-0 transition-transform duration-150 ease-in-out origin-center z-0"></span>
 						</button>
 						<div className='absolute bottom-full mb-2 hidden group-hover:block bg-black text-white text-base rounded px-3 py-1 whitespace-nowrap z-10 font-ppNeueMontreal left-1/2 transform -translate-x-1/2'>
 							Coming soon
